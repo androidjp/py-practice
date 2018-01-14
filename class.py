@@ -1,4 +1,6 @@
 # class of Python
+from typing import Any
+
 
 class Vehicle:
     pass
@@ -6,7 +8,9 @@ class Vehicle:
 
 car = Vehicle()
 print(car)
-print('##############')
+print('===========================')
+print('第一个类的定义')
+print('===========================')
 
 
 class Vehicle:
@@ -32,6 +36,9 @@ print(v1.name)
 Vehicle.setAge(v1, 9)
 print(v1.age)
 
+print('===========================')
+print('关于getter 和 setter的定义和使用')
+print('===========================')
 
 class Person:
     def __init__(self, first_name, email):
@@ -45,8 +52,48 @@ class Person:
         return self._email
 
 tk = Person('TK', 'tk@mail.com')
-print(tk.email()) # => tk@mail.comtk._email = 'new_tk@mail.com'print(tk.email()) # => tk@mail.comtk.update_email('new_tk@mail.com')
+print(tk.email())
 tk._email = 'new_tk@mail.com'
 print(tk.email())
 tk.update_email('123@mail.com')
 print(tk.email()) # => new_tk@mail.com
+
+print("====================================")
+print("真正的private属性:")
+print("====================================")
+
+class Obj2:
+    value = "Ming"
+    def __init__(self):
+        self.__id = None
+
+obj2 = Obj2()
+print(obj2.value)
+bol = True if obj2.value is None else False
+print(bol)
+
+print("====================================")
+print("类内部实现toString")
+print("====================================")
+
+class student:
+    name:None
+    age:None
+    sex:None
+
+    def __getattribute__(self, name: str) -> Any:
+        return super().__getattribute__(name)
+
+    def toString(self):
+        for key, value in vars(self).items():
+            print("%s --> %s" %(key, value))
+    pass
+
+stuA = student()
+stuA.name = "A"
+stuA.age = 18
+stuA.sex = True
+stuA.toString()
+
+
+
