@@ -1,0 +1,3 @@
+class FinalSalaryService:
+
+    pass
