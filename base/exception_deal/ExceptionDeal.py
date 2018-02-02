@@ -26,9 +26,11 @@ print('===================================')
 print('[自己抛异常]')
 print('------')
 
+
 def method2(man, tools):
     raise Exception('Have Bug', man, tools)
     pass
+
 
 try:
     method2('刘东强', '剁手刀')
