@@ -7,10 +7,22 @@ ming = Person('Ming', 18)
 fang = Person('Fang', 19)
 
 print('===================================')
+print('[toString 看看我们的员工]')
+print('------')
+
+ming.toString()
+fang.toString()
+
+print('===================================')
 print('[Ming get Award！]')
 print('------')
 
 yearEndAwardService.giveAwardToColleague(ming)
 print('%s , 今年%d岁 , 年中奖只有他自己知道：%d元' % (ming.name, ming.age, ming.getSalary()))
+
+print('===================================')
+print('[Ming get Award！]')
+print('------')
+
 yearEndAwardService.giveAwardToColleague(fang)
 print('%s , 今年%d岁 , 年中奖只有他自己知道：%d元' % (fang.name, fang.age, fang.getSalary()))

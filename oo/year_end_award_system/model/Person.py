@@ -1,5 +1,5 @@
 class Person:
-    __salary: None
+    __salary: 0
 
     def __init__(self, name, age):
         self.name = name
@@ -11,3 +11,15 @@ class Person:
 
     def setSalary(self, salary):
         self.__salary = salary
+
+    def toString(self):
+        res = ''
+        for key, value in vars(self).items():
+            # print("%s --> %s" % (key, value))
+            res += ' ('
+            res += key
+            res += ' - '
+            res += str(value)
+            res += ') '
+        print(res)
+    pass
