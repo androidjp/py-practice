@@ -1,0 +1,16 @@
+from oo.year_end_award_system.model.Person import Person
+from oo.year_end_award_system.service.YearEndAwardService import YearEndAwardService
+
+yearEndAwardService = YearEndAwardService()
+
+ming = Person('Ming', 18)
+fang = Person('Fang', 19)
+
+print('===================================')
+print('[Ming get Award！]')
+print('------')
+
+yearEndAwardService.giveAwardToColleague(ming)
+print('%s , 今年%d岁 , 年中奖只有他自己知道：%d元' % (ming.name, ming.age, ming.getSalary()))
+yearEndAwardService.giveAwardToColleague(fang)
+print('%s , 今年%d岁 , 年中奖只有他自己知道：%d元' % (fang.name, fang.age, fang.getSalary()))

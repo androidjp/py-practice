@@ -1,5 +1,5 @@
-class Student:
-    _salary: None
+class Person:
+    __salary: None
 
     def __init__(self, name, age):
         self.name = name
@@ -7,9 +7,7 @@ class Student:
         pass
 
     def getSalary(self):
-        return self._salary / 100
+        return self.__salary * 0.8
 
     def setSalary(self, salary):
-        self._salary = salary * 0.8
-
-
+        self.__salary = salary
