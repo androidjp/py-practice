@@ -37,6 +37,15 @@ for item in students:
         print('%s --> %s' % (key, val))
 
 print('===================================')
+print('[数组遍历方法二]')
+print('------')
+
+for index, stu in enumerate(students):
+    print(index)
+    for i, field in enumerate(stu):
+        print(i, field)
+
+print('===================================')
 print('[集合：Set]')
 print('------')
 
