@@ -51,6 +51,8 @@ print('------')
 
 setA = {123, 'ABC'}
 print(setA)
+setB = set([1, 1, 2, 3, 3])
+print(setB)
 
 print('===================================')
 print('[元组：tuple]')
@@ -58,3 +60,14 @@ print('------')
 
 tupleA = (123, 'ABC')
 print(tupleA)
+
+print('===================================')
+print('[dict 字典 --> 相当于 Map : 存取速度快，但是很耗内存]')
+print('--------------')
+
+dictA = {'Bob': 18, 'Amy': 28}
+print(dictA['Amy'])
+print('Tom' in dictA)
+dictA['Tom'] = 'Leader'
+print('Tom' in dictA)
+print(dictA['Tom'])
