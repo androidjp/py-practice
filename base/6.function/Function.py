@@ -6,6 +6,14 @@ print('===================================')
 print('[指定传入参数的默认值]')
 print('------')
 
+
+def mthd(config='DEFAULT'):
+    print(config)
+
+
+mthd()
+mthd('YEAH')
+
 print('===================================')
 print('[可变参数]')
 print('------')
@@ -44,3 +52,21 @@ def mthd(name, **msg):
 
 
 mthd('ming', msg={'age': 18, 'major': 'English'})
+
+print('===================================')
+print('[函数作为返回值]')
+print('--------------')
+
+
+def count(args):
+    def sum():
+        result = 0
+        for i in args:
+            result += i
+        return result
+
+    return sum
+
+
+f = count([1, 2, 3, 4])
+print(f())
