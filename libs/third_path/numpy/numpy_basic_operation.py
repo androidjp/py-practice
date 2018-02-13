@@ -71,8 +71,41 @@ b = np.arange(4)
 print(b)
 print('e的n次方（e 约等于  2.718281）：', np.exp(b))
 print('开根：', np.sqrt(b))
-print('次方根：', b**3)
+print('次方根：', b ** 3)
 
 print('===================================')
-print('[索引,切片与迭代]')
+print('[索引,切片与迭代 , np的矩阵 有着 Py的数组的基本能力]')
 print('------')
+
+a = np.arange(10) ** 3
+print(a)
+print(a[2:5])
+
+print('二维矩阵')
+b = np.fromfunction(lambda x, y: 10 * x + y, (5, 4), dtype=int)
+print(b)
+print(b[0:5, 1])
+print(b[-1])
+
+print('多维矩阵')
+c = np.arange(12).reshape(2, 2, 3)
+print(c)
+print(c[..., 0])
+print(c[0, ...])
+print(c[0])
+
+print('遍历')
+
+for row in c:
+    print(row)
+
+print('扁平化方式的遍历')
+for ele in c.flat:
+    print(ele)
+
+print('===================================')
+print('[floor() 将元素值得小数位全部不要]')
+print('------')
+
+a = np.floor(10 * np.random.random((3, 4)))
+print(a)
