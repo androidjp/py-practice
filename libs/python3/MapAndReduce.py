@@ -48,3 +48,11 @@ def str2int(s):
 num = str2int('43221')
 print(num)
 print(isinstance(num, str))
+
+print('===================================')
+print('[一句英文，首字母转大写]')
+print('--------------')
+
+dialog = 'i was a body.'
+res = reduce(lambda x, y: x + ' ' + y, map(lambda c: c[0].upper() + c[1:] if c[0].isalpha() else c, dialog.split()))
+print(res)
