@@ -88,3 +88,6 @@ Python 的语法  和 Javascript 、Kolin 相似。
 知识扩展：
 * [什么是支持向量机（SVM）](https://www.zhihu.com/question/21094489)
 
+写一下公式，看看能不能识别：
+$\sqrt[x]{y^4+3y-1}$
+
