@@ -56,3 +56,19 @@ print('--------------')
 dialog = 'i was a body.'
 res = reduce(lambda x, y: x + ' ' + y, map(lambda c: c[0].upper() + c[1:] if c[0].isalpha() else c, dialog.split()))
 print(res)
+
+print('===================================')
+print('[对一个dict做filter ,把他内部所有_开头属性都filter掉]')
+print('------')
+# 第二种写法
+# dic0 = {"_id":"123456", "_class":"class", "name":"yes"}
+dic = dict(_id="123456", _class="class", name="yes")
+print(isinstance(dic, object))
+print('原来的dic\n', dic)
+
+res = dic.copy()
+for it in dic:
+    if it == '_id':
+        del res[it]
+dic.clear()
+print('filter之后的dic\n', res)
