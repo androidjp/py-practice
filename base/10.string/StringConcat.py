@@ -14,9 +14,18 @@ print('way 6: f-string (Python 3.6 引入，全称 Formatted String Literals字�
 
 print('way 7: 星号* ，对应的魔术方法是__mul__\n', 'hello ' * 3)
 
+s = (
+    'Hell'
+    'ooo '
+    'world'
+)
+print('way 8: 通过()多行拼接\n', s)
+
+from string import Template
+
+s = Template('${s1} with ${s2}')
+print('way 9: string模块中的Template对象进行拼接\n', s.safe_substitute(s1='Tom', s2='Mike'))
 # 总结：
 # 对性能较高要求+ python3.6以上：f-string
 # 少量字符串：+
 # 大量字符串：join 和f-string
-
-
